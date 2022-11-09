@@ -1,9 +1,7 @@
 # LAP 3 Code Challenge
-
 ## Local Github React App
 #### Dave && Peter
 
----
 ## Requirements
 
 We are on GitHub a lot! We will make our own repo tracker so we can get an overview of our work without visiting the site itself.
