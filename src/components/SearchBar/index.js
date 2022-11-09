@@ -1,29 +1,34 @@
 import React from 'react'
 
-export default function SearchBar(props) {
+export default function SearchBar({searchTerm, setSearchTerm}) {
 
-    console.log(props)
+function handleInputText(e) {
+  setSearchTerm(e.target.value);
+}
 
-  function handleInputText(e) {
-    setSearchTerm(e.target.value);
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    setUserName([
-      ...userName,
-      {text: searchTerm, completed:false, id: Math.random() * 1000}
-    ])
-    setSearchTerm("")
-  }
+function handleSubmit(e) {
+  e.preventDefault();
+}
 
   return (
     <form>
-        <label htmlFor='username'>Username</label>
-        <input id="username" name="username" value={searchTerm} onChange={handleInputText} type="text" className="user-name-input" />
-        <button role="button" onClick={handleSubmit} className="search-button" type="submit">
-            <i className="fas fa-plus-square"></i>
-        </button>
+      <input 
+      type="text" 
+      onChange={handleInputText}
+      value={searchTerm}
+      />
+      <button onClick={handleSubmit}>SEARCH</button>
     </form>
+    // <form>
+    //     <label htmlFor='username'>Username</label>
+    //       <input id="username" 
+    //       value={searchTerm} 
+    //       onChange={handleInputText} 
+    //       type="text" 
+    //       className="user-name-input" 
+    //     />
+    //     <button role="button" onClick={handleSubmit} className="search-button" type="submit">
+    //         <i className="fas fa-plus-square"></i>Submit</button>
+    // </form>
   )
 }
