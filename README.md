@@ -16,10 +16,10 @@ We are working in pairs for this challenge and teaming up with another pair to g
 ## Usage
 Install packages with `npm install`
 
-Once installed, run the following commands with *npm run*. For example, to run the development script, use `npm run dev`.
+Once installed, run the following commands with `npm run`. For example, to run the development script, use `npm run dev`.
 
 * `dev` - Run development
-* `build` - Run build
+* `build` - Run production build
 * `test` - Run all tests
 * `coverage` - Run tests with coverage report
 
