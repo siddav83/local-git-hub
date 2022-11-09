@@ -4,13 +4,16 @@ import test from './test.jpg'
 
 const User = () => {
     return (
-        <div id="user" style={{ textAlign: "justify", padding: "5%" }}>
+        <div>
+        {/* <div id="user" style={{ textAlign: "justify", padding: "5%" }}> */}
             <NavBar />
+            <NavBar />
+             <div className="container">
             <div className="card">
                 <div className="image"><img src={test} alt="" /></div>
                 <div className="name-container">
-                    <p>david</p>
-                    <p>siddav</p>
+                    <p className="card-name">david siddle</p>
+                    <p className="card-handle">siddav</p>
                     <button>follow</button>
                     <p>Aim to land a junior dev role by Oct 2022. Working on my fullstack skills focusing on Javascript, React, Nodejs and PSQL</p>
                     <div className="follower">
@@ -25,8 +28,41 @@ const User = () => {
                         <img src="" alt="" />
                         <img src="" alt="" />
                     </div>
-                    <h5>Popular Repos</h5>
+                    </div>
+            </div>
+                   
+                    <h5 className="header">Popular Repos</h5>
                     <div className="container-card">
+                        <div className="repo-card">
+                            <div className="title">fp_study_notes</div>
+                            <div className="public?">public</div>
+                            <div className="desc">description</div>
+                            <div className="lang"></div><img src="" alt="" />
+                        </div>
+                        <div className="repo-card">
+                            <div className="title">fp_study_notes</div>
+                            <div className="public?">public</div>
+                            <div className="desc">description</div>
+                            <div className="lang"></div><img src="" alt="" />
+                        </div>
+                        <div className="repo-card">
+                            <div className="title">fp_study_notes</div>
+                            <div className="public?">public</div>
+                            <div className="desc">description</div>
+                            <div className="lang"></div><img src="" alt="" />
+                        </div>
+                        <div className="repo-card">
+                            <div className="title">fp_study_notes</div>
+                            <div className="public?">public</div>
+                            <div className="desc">description</div>
+                            <div className="lang"></div><img src="" alt="" />
+                        </div>
+                        <div className="repo-card">
+                            <div className="title">fp_study_notes</div>
+                            <div className="public?">public</div>
+                            <div className="desc">description</div>
+                            <div className="lang"></div><img src="" alt="" />
+                        </div>
                         <div className="repo-card">
                             <div className="title">fp_study_notes</div>
                             <div className="public?">public</div>
@@ -36,9 +72,10 @@ const User = () => {
 
                     </div>
                     
-                </div>
-            </div>
+                
+            
 
+        </div>
         </div>
     );
 }

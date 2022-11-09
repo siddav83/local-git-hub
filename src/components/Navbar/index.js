@@ -6,11 +6,11 @@ import './style.css';
 const NavBar = () => {
     return (
         <nav>
-            <NavLink  to="/repo">Overiew</NavLink>
-            <NavLink  to="/repo">Repositories</NavLink>
-            <NavLink  to="/search">Projects</NavLink>
-            <NavLink  to="/search">Packages</NavLink>
-            <NavLink  to="/search">Stars</NavLink>
+            <NavLink  className="link" to="/repo">Overiew</NavLink>
+            <NavLink  className="link" to="/repo">Repositories</NavLink>
+            <NavLink  className="link" to="/search">Projects</NavLink>
+            <NavLink  className="link" to="/search">Packages</NavLink>
+            <NavLink  className="link" to="/search">Stars</NavLink>
             {/* <BackButton /> */}
         </nav>
     );
