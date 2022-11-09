@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Navbar } from './components';
 import { FourOhFour, Home, Repo, User, UserRepos} from './pages'
@@ -7,9 +6,7 @@ import './styles/App.css';
 import axios from 'axios'
 import SearchBar from './components/SearchBar';
 
-
 function searchRepos() {
-
     axios({
         method: 'get',
         url: `https://api.github.com/users/siddav83`,
