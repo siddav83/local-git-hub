@@ -1,4 +1,4 @@
-import { default as Hp,e } from '.';
+import { default as Home } from '.';
 import { screen, render } from '@testing-library/react';
 
 describe('Home', () => {
