@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
-import { Home, Repo, User, UserRepos} from './pages'
 import { Navbar } from './components';
+import { FourOhFour, Home, Repo, User, UserRepos} from './pages'
 import { Routes, Route} from 'react-router-dom';
 import './styles/App.css';
 import axios from 'axios'
@@ -30,6 +31,7 @@ const [searchTerm, setSearchTerm] = useState([])
                   <Route path="/user" element={<User navbar={Navbar} />} />
                   <Route path="/user/repos" element={<UserRepos/>} />
                   <Route path="/user/repos/repo" element={<Repo/>} />
+                  <Route path="/*" element={<FourOhFour/>} />
               </Routes>
           </main>
       </div>
