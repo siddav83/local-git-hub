@@ -2,6 +2,20 @@ import React from 'react';
 import { FourOhFour, Home, Repo, User, UserRepos} from './pages'
 import { Routes, Route} from 'react-router-dom';
 import './styles/App.css';
+import axios from 'axios'
+
+function searchRepos() {
+
+    axios({
+        method: 'get',
+        url: `https://api.github.com/users/siddav83/repos`,
+    }).then(res => {
+        // setLoading(false);
+        // setRepos(res.data);
+        console.log(res.data)
+    });
+}
+searchRepos()
 
 function App() {
   return (
