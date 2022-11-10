@@ -3,25 +3,27 @@ import NavBar from '../../components/Navbar';
 import test from './test.jpg'
 
 const User = ({data}) => {
-    console.log(data, "I am in users")
+
+    const {avatar_url,bio,followers,following,location,name,login} = data;
+//  data.length ? data.map((ele => console.log(ele.name))) : console.log("failed") 
+  
     return (
         <div>
         {/* <div id="user" style={{ textAlign: "justify", padding: "5%" }}> */}
             <NavBar />
-            <NavBar />
              <div className="container">
             <div className="card">
-                <div className="image"><img src={test} alt="" /></div>
+                <div className="image"><img src={avatar_url} alt="" /></div>
                 <div className="name-container">
-                    <p className="card-name">david siddle</p>
-                    <p className="card-handle">siddav</p>
+                    <p className="card-name">{name}</p>
+                    <p className="card-handle">{login}</p>
                     <button>follow</button>
-                    <p>Aim to land a junior dev role by Oct 2022. Working on my fullstack skills focusing on Javascript, React, Nodejs and PSQL</p>
+                    <p>{bio}</p>
                     <div className="follower">
-                        <div><img src="" alt="" /><span>100</span> followers</div>
-                        <div><img src="" alt="" /><span>13</span> following</div>
+                        <div><img src="" alt="" /><span>{followers}</span> followers</div>
+                        <div><img src="" alt="" /><span>{following}</span> following</div>
                     </div>
-                    <div className="location"><img src="" alt="" />Bali</div>
+                    <div className="location"><img src="" alt="" />{location}</div>
                     <div className="twitterHandle"><img src="" alt="" />@daviedawie</div>
                     <div className="achieve-cont">
                         <h5>Achievements</h5>
@@ -30,47 +32,18 @@ const User = ({data}) => {
                         <img src="" alt="" />
                     </div>
                     </div>
-            </div>
+            </div> 
+                
                    
                     <h5 className="header">Popular Repos</h5>
                     <div className="container-card">
                         <div className="repo-card">
+                            
                             <div className="title">fp_study_notes</div>
                             <div className="public?">public</div>
                             <div className="desc">description</div>
                             <div className="lang"></div><img src="" alt="" />
                         </div>
-                        <div className="repo-card">
-                            <div className="title">fp_study_notes</div>
-                            <div className="public?">public</div>
-                            <div className="desc">description</div>
-                            <div className="lang"></div><img src="" alt="" />
-                        </div>
-                        <div className="repo-card">
-                            <div className="title">fp_study_notes</div>
-                            <div className="public?">public</div>
-                            <div className="desc">description</div>
-                            <div className="lang"></div><img src="" alt="" />
-                        </div>
-                        <div className="repo-card">
-                            <div className="title">fp_study_notes</div>
-                            <div className="public?">public</div>
-                            <div className="desc">description</div>
-                            <div className="lang"></div><img src="" alt="" />
-                        </div>
-                        <div className="repo-card">
-                            <div className="title">fp_study_notes</div>
-                            <div className="public?">public</div>
-                            <div className="desc">description</div>
-                            <div className="lang"></div><img src="" alt="" />
-                        </div>
-                        <div className="repo-card">
-                            <div className="title">fp_study_notes</div>
-                            <div className="public?">public</div>
-                            <div className="desc">description</div>
-                            <div className="lang"></div><img src="" alt="" />
-                        </div>
-
                     </div>
                     
                 

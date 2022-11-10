@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-export default function SearchBar({userName,setUsername, searchTerm, setSearchTerm}) {
+export default function SearchBar({userName, setUsername, searchTerm, setSearchTerm, setData}) {
 
-console.log(userName,"here")
 function handleInputText(e) {
   setUsername(e.target.value);
 }
@@ -17,11 +16,11 @@ function handleInputText(e) {
   return (
     <form onClick={handleSubmit}>
       <input 
-      type="text"
-      name="name"
-      placeholder="Username"
-      value={userName}
-      onChange={handleInputText}
+        type="text"
+        name="name"
+        placeholder="Username"
+        value={userName}
+        onChange={handleInputText}
       />
      <Link to="/user"> <button>SEARCH</button></Link>
      
