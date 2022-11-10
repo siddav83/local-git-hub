@@ -23,8 +23,8 @@ nav {
     padding-right: 15px;
 }
 
-.image {
-    width: 250px;
+.image img {
+    width: 100px;
     border-radius: 50%;
     position: relative;
     top:-50px;
