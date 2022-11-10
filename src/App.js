@@ -12,35 +12,35 @@ const [repoData,setRepoData] = useState([]);
 
 // useEffect(() => {
   
-    const getData = async () => {
+    // const getData = async () => {
  
-            const response = await fetch(`https://api.github.com/users/${searchTerm}`)
+    //         const response = await fetch(`https://api.github.com/users/${searchTerm}`)
 
-            const data = await response.json()
+    //         const data = await response.json()
 
-            setUserData(data);
+    //         setUserData(data);
     
-            }
-              getData().catch(console.error)
+    //         }
+    //           getData().catch(console.error)
 
 
-    // }, [searchTerm])
+    // // }, [searchTerm])
 
-    useEffect(() => {
+    // useEffect(() => {
   
-        const getRepoData = async () => {
+    //     const getRepoData = async () => {
      
-                const response = await fetch(`https://api.github.com/users/${searchTerm}/repos`)
+    //             const response = await fetch(`https://api.github.com/users/${searchTerm}/repos`)
     
-                const data = await response.json()
+    //             const data = await response.json()
     
-           setRepoData(data);
+    //        setRepoData(data);
         
-                }
-                getRepoData().catch(console.error)
+    //             }
+    //             getRepoData().catch(console.error)
     
     
-        }, [searchTerm])
+    //     }, [searchTerm])
 
   return (
       <div id="app">
