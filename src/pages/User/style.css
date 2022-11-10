@@ -60,21 +60,24 @@
     display: grid;
     grid-template-columns: 300px 300px;
     grid-template-rows: 120px 120px 120px;
-    /* overflow: hidden; */
-    /* overflow-y: hidden; */
-    /* overflow-x: hidden; */
 }
 .repo-card {
-    /* margin: 20px;
-    width: 250px;
-    height: 100px; */
-    background-color: orange;
+    padding: 10px;
+    border: lightgray 1px solid;
+    border-radius: 5px;
+
+    background-color: white;
     margin: 10px;
+}
+.repo-card .public {
+    position: relative;
+    left: 200px;
 }
 
 .header {
+    padding-left: 15px;
     position: absolute;
-
+    top: 80px;
 }
 .fake-search-bar {
     font-size: 100px;
@@ -87,7 +90,7 @@
 }
 
 .follower {
-    border-top: lightgray solid 1px;
+    border-bottom: lightgray solid 1px;
     padding: 15px;
     display: flex;
 }
@@ -103,4 +106,5 @@
     padding: 15px;
     padding-top: 0;
     margin: 5px;
+    border-bottom: lightgray solid 1px;
 }
