@@ -1,23 +1,28 @@
 import React from 'react'
 
-export default function SearchBar({searchTerm, setSearchTerm}) {
+export default function SearchBar({userName,setUsername, searchTerm, setSearchTerm}) {
 
+console.log(userName,"here")
 function handleInputText(e) {
-  setSearchTerm(e.target.value);
+  setUsername(e.target.value);
 }
 
-function handleSubmit(e) {
-  e.preventDefault();
-}
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setSearchTerm(userName)
+    setUsername("")
+  }
 
   return (
-    <form>
+    <form onClick={handleSubmit}>
       <input 
-      type="text" 
+      type="text"
+      name="name"
+      placeholder="Username"
+      value={userName}
       onChange={handleInputText}
-      value={searchTerm}
       />
-      <button onClick={handleSubmit}>SEARCH</button>
+      <button >SEARCH</button>
     </form>
     // <form>
     //     <label htmlFor='username'>Username</label>
