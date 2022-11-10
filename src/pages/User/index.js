@@ -1,15 +1,14 @@
 import React from 'react';
 import NavBar from '../../components/Navbar';
-import test from './test.jpg'
 
-const User = ({data}) => {
+const User = ({userData, repoData}) => {
+    console.log(repoData)
 
-    const {avatar_url,bio,followers,following,location,name,login} = data;
-//  data.length ? data.map((ele => console.log(ele.name))) : console.log("failed") 
+    const {avatar_url,bio,followers,following,location,name,login} = userData;
+ 
   
     return (
         <div>
-        {/* <div id="user" style={{ textAlign: "justify", padding: "5%" }}> */}
             <NavBar />
              <div className="container">
             <div className="card">
@@ -37,18 +36,18 @@ const User = ({data}) => {
                    
                     <h5 className="header">Popular Repos</h5>
                     <div className="container-card">
-                        <div className="repo-card">
-                            
-                            <div className="title">fp_study_notes</div>
-                            <div className="public?">public</div>
-                            <div className="desc">description</div>
-                            <div className="lang"></div><img src="" alt="" />
-                        </div>
+                    {repoData.length ? repoData.map((ele) => {
+                        //    const { fullname, fork,fork_counts,language } = repoData;
+                         return <div className="repo-card">
+                                <div className="title">{ele}</div>
+                                {/* <div className="public?">{fork}</div>
+                                <div className="desc">{fork_counts}</div>
+                                <div className="lang">{language}</div><img src="" alt="" /> */}
                     </div>
-                    
-                
-            
-
+                    }): undefined}
+                  
+                      
+                    </div>
         </div>
         </div>
     );

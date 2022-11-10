@@ -7,9 +7,10 @@ import './styles/App.css';
 function App() {
 const [userName, setUsername] = useState("");
 const [searchTerm,setSearchTerm] = useState("");
+const [UserData,setUserData] = useState([]);
 const [repoData,setRepoData] = useState([]);
 
-useEffect(() => {
+// useEffect(() => {
   
     const getData = async () => {
  
@@ -17,20 +18,36 @@ useEffect(() => {
 
             const data = await response.json()
 
-       setRepoData(data);
+            setUserData(data);
     
             }
               getData().catch(console.error)
 
 
-    }, [searchTerm])
+    // }, [searchTerm])
+
+    useEffect(() => {
+  
+        const getRepoData = async () => {
+     
+                const response = await fetch(`https://api.github.com/users/${searchTerm}/repos`)
+    
+                const data = await response.json()
+    
+           setRepoData(data);
+        
+                }
+                getRepoData().catch(console.error)
+    
+    
+        }, [searchTerm])
 
   return (
       <div id="app">
           <main>
               <Routes>
-                  <Route path="/" element={<Home userName={userName} setUsername={setUsername} searchTerm={searchTerm} setSearchTerm={setSearchTerm} setData={setRepoData} data={repoData}/>} />
-                  <Route path="/user" element={<User navbar={Navbar} data={repoData} />} />
+                  <Route path="/" element={<Home userName={userName} setUsername={setUsername} searchTerm={searchTerm} setSearchTerm={setSearchTerm} setUserData={setUserData} userData={UserData} setRepoData={setRepoData} repoData={repoData}/>} />
+                  <Route path="/user" element={<User navbar={Navbar} userData={UserData} repoData={repoData} />} />
                   <Route path="/user/repos" element={<UserRepos/>} />
                   <Route path="/user/repos/repo" element={<Repo/>} />
                   <Route path="*" element={<FourOhFour/>} />
