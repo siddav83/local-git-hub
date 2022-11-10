@@ -1,25 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar } from './components';
 import { FourOhFour, Home, Repo, User, UserRepos} from './pages'
 import { Routes, Route} from 'react-router-dom';
 import './styles/App.css';
-import axios from 'axios'
-import SearchBar from './components/SearchBar';
+// import SearchBar from './components/SearchBar';
 
 function App() {
-const [searchTerm, setSearchTerm] = useState("")
-console.log(searchTerm)
+const [userName, setUsername] = useState("shit");
+const [searchTerm,setSearchTerm] = useState("poo");
+const [data,setData] = useState([]);
+// console.log(searchTerm)
 
-
-function searchRepos(searchTerm) {
-    console.log(searchTerm,"in fuction in app")
-    axios({
-        method: 'get',
-        url: `https://api.github.com/users/${searchTerm}`,
-    }).then(res => {
-        console.log(res.data)
-    });
+const getData = async () => {
+    const response = await fetch(`https://api.github.com/users/${searchTerm}`)
+    const data = await response.json()
+    setData(data)
+    console.log(data)
 }
+
+useEffect(() => {
+    getData()
+    console.log(data,"useeffect")
+    }, [searchTerm])
 
 // searchRepos()
 
@@ -27,15 +29,16 @@ function searchRepos(searchTerm) {
       <div id="app">
           <main>
               <Routes>
-                  <Route path="/" element={<Home searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+                  <Route path="/" element={<Home userName={userName} setUsername={setUsername} searchTerm={searchTerm} setSearchTerm={setSearchTerm} setData={setData} />} />
                   <Route path="/user" element={<User navbar={Navbar} />} />
                   <Route path="/user/repos" element={<UserRepos/>} />
                   <Route path="/user/repos/repo" element={<Repo/>} />
-                  <Route path="/*" element={<FourOhFour/>} />
+                  <Route path="*" element={<FourOhFour/>} />
               </Routes>
           </main>
       </div>
   )
+
 }
 
 export default App;

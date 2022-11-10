@@ -1,13 +1,13 @@
-* {
+/* * {
     margin: 0;
-}
+} */
 
 .container {
  
     display: flex;
     justify-content: center;
     max-width: 1300px;
-    background-color: red;
+    /* background-color: red; */
     margin:auto;
 }
 
@@ -23,7 +23,7 @@ nav {
     padding-right: 15px;
 }
 
-img {
+.image {
     width: 250px;
     border-radius: 50%;
     position: relative;
