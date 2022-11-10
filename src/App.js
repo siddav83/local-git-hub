@@ -10,7 +10,7 @@ const [searchTerm,setSearchTerm] = useState("");
 const [UserData,setUserData] = useState([]);
 const [repoData,setRepoData] = useState([]);
 
-// useEffect(() => {
+useEffect(() => {
   
     const getData = async () => {
  
@@ -24,7 +24,7 @@ const [repoData,setRepoData] = useState([]);
               getData().catch(console.error)
 
 
-    // }, [searchTerm])
+    }, [searchTerm])
 
     useEffect(() => {
   
@@ -57,5 +57,6 @@ const [repoData,setRepoData] = useState([]);
   )
 
 }
+
 
 export default App;
