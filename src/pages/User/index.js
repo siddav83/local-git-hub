@@ -2,7 +2,8 @@ import React from 'react';
 import NavBar from '../../components/Navbar';
 import test from './test.jpg'
 
-const User = () => {
+const User = ({data}) => {
+    console.log(data, "I am in users")
     return (
         <div>
         {/* <div id="user" style={{ textAlign: "justify", padding: "5%" }}> */}

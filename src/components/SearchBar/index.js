@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function SearchBar({userName,setUsername, searchTerm, setSearchTerm}) {
 
@@ -22,7 +23,8 @@ function handleInputText(e) {
       value={userName}
       onChange={handleInputText}
       />
-      <button >SEARCH</button>
+     <Link to="/user"> <button>SEARCH</button></Link>
+     
     </form>
     // <form>
     //     <label htmlFor='username'>Username</label>
