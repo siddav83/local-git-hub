@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route} from 'react-router-dom';
 import { Navbar } from './components';
 import { FourOhFour, Home, Repo, User, UserRepos} from './pages'
-import { Routes, Route} from 'react-router-dom';
 import './styles/App.css';
-// import SearchBar from './components/SearchBar';
 
 function App() {
 const [userName, setUsername] = useState("shit");
 const [searchTerm,setSearchTerm] = useState("poo");
 const [data,setData] = useState([]);
-// console.log(searchTerm)
 
 const getData = async () => {
     const response = await fetch(`https://api.github.com/users/${searchTerm}`)
@@ -22,8 +20,6 @@ useEffect(() => {
     getData()
     console.log(data,"useeffect")
     }, [searchTerm])
-
-// searchRepos()
 
   return (
       <div id="app">
