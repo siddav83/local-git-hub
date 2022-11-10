@@ -1,5 +1,5 @@
 # LAP 3 Code Challenge
-## Get On With Git - a Local Github React App
+## Just Get On With Git - a Local Github React App
 #### Dave && Peter
 
 ## Requirements
