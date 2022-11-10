@@ -26,16 +26,5 @@ function handleInputText(e) {
      <Link to="/user"> <button>SEARCH</button></Link>
      
     </form>
-    // <form>
-    //     <label htmlFor='username'>Username</label>
-    //       <input id="username" 
-    //       value={searchTerm} 
-    //       onChange={handleInputText} 
-    //       type="text" 
-    //       className="user-name-input" 
-    //     />
-    //     <button role="button" onClick={handleSubmit} className="search-button" type="submit">
-    //         <i className="fas fa-plus-square"></i>Submit</button>
-    // </form>
   )
 }

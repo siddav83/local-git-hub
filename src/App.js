@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route} from 'react-router-dom';
 import { Navbar } from './components';
 import { FourOhFour, Home, Repo, User, UserRepos} from './pages'
-import { Routes, Route} from 'react-router-dom';
 import './styles/App.css';
 
 function App() {
