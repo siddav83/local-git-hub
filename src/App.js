@@ -9,16 +9,17 @@ const [userName, setUsername] = useState("shit");
 const [searchTerm,setSearchTerm] = useState("poo");
 const [data,setData] = useState([]);
 
-const getData = async () => {
-    const response = await fetch(`https://api.github.com/users/${searchTerm}`)
-    const data = await response.json()
-    setData(data)
-    console.log(data)
-}
-
 useEffect(() => {
+    const getData = async () => {
+        try {
+            const response = await fetch(`https://api.github.com/users/${searchTerm}/repos`)
+            const data = await response.json()
+         setData(data)
+        } catch (error) {
+            console.error(error)
+        }
+    }
     getData()
-    console.log(data,"useeffect")
     }, [searchTerm])
 
   return (
@@ -26,7 +27,7 @@ useEffect(() => {
           <main>
               <Routes>
                   <Route path="/" element={<Home userName={userName} setUsername={setUsername} searchTerm={searchTerm} setSearchTerm={setSearchTerm} setData={setData} />} />
-                  <Route path="/user" element={<User navbar={Navbar} />} />
+                  <Route path="/user" element={<User navbar={Navbar} data={data} />} />
                   <Route path="/user/repos" element={<UserRepos/>} />
                   <Route path="/user/repos/repo" element={<Repo/>} />
                   <Route path="*" element={<FourOhFour/>} />
