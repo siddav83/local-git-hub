@@ -33,7 +33,7 @@ useEffect(() => {
                   <Route path="/user" element={<User navbar={Navbar} />} />
                   <Route path="/user/repos" element={<UserRepos/>} />
                   <Route path="/user/repos/repo" element={<Repo/>} />
-                  <Route path="/*" element={<FourOhFour/>} />
+                  <Route path="*" element={<FourOhFour/>} />
               </Routes>
           </main>
       </div>
