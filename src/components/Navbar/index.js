@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import BackButton from '../BackButton';
+import BackButton from '../BackButton';
 import './style.css';
 
 const NavBar = () => {
@@ -10,8 +10,7 @@ const NavBar = () => {
             <NavLink  className="link" to="/repo">Repositories</NavLink>
             <NavLink  className="link" to="/search">Projects</NavLink>
             <NavLink  className="link" to="/search">Packages</NavLink>
-            <NavLink  className="link" to="/search">Stars</NavLink>
-            {/* <BackButton /> */}
+            <BackButton />
         </nav>
     );
 }

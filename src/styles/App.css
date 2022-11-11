@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+
+body {
+  font-family: 'Prompt', sans-serif;
+
+}
+
+
 /* .App {
   text-align: center;
 }
@@ -40,4 +48,4 @@
 body {
   background-color: #bdbdbd;
   box-shadow: inset 1px 1px #fff, 1px 1px #000;
-} */
+} */ 

@@ -3,11 +3,43 @@ nav {
     display: flex;
     justify-content: center;
     border-bottom: lightgray solid 1px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     padding-left: 300px;
 }
 
 .link {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+a { 
+    color: var(--opacity);
+    text-decoration: none;
+    font-size: 1rem;
+    /* text-transform: uppercase; */
+}
+
+a:hover { 
+    font-weight: 800;
+    text-decoration:underline;
+
+}
+
+.active {
+    color: white;
+}
+
+.home-link { color: wheat; }
+
+.link-btn {
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    /* align-items: center; */
+}
+
+.link-btn:hover { 
+    font-weight: 800;
+    text-decoration:underline;
+
 }

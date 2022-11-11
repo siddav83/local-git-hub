@@ -43,17 +43,7 @@ const User = ({userData, repoData}) => {
                 
             <div className="container-card">
                     <h5 className="header">Popular Repos</h5>
-                     {/* <div className="repo-card">
-                                <div className="title"title></div>
-                                <div className="public">public</div>
-                                <div className="desc">desc</div>
-                                <div className="lang">lang</div><img src="" alt="" />
-                    </div> */}
-             
                     {repoData.length ? repoData.slice(0,6).map((ele) => {
-            
-                        console.log(ele.name)
-                        //    const { fullname, fork,fork_counts,language } = repoData;
                          return <div className="repo-card">
                                 <div className="title">{ele.fullname}</div>
                                 <div className="public?">{ele.fork}</div>
@@ -61,6 +51,44 @@ const User = ({userData, repoData}) => {
                                 <div className="lang">{ele.language}</div><img src="" alt="" />
                     </div>
                     }): undefined}
+                     <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+             
+                 
                   
                       
                     </div>
