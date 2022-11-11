@@ -43,13 +43,6 @@ const User = ({userData, repoData}) => {
                 
             <div className="container-card">
                     <h5 className="header">Popular Repos</h5>
-                     {/* <div className="repo-card">
-                                <div className="title"title></div>
-                                <div className="public">public</div>
-                                <div className="desc">desc</div>
-                                <div className="lang">lang</div><img src="" alt="" />
-                    </div> */}
-             
                     {repoData.length ? repoData.slice(0,6).map((ele) => {
                          return <div className="repo-card">
                                 <div className="title">{ele.fullname}</div>
@@ -58,6 +51,44 @@ const User = ({userData, repoData}) => {
                                 <div className="lang">{ele.language}</div><img src="" alt="" />
                     </div>
                     }): undefined}
+                     <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+                    <div className="repo-card">
+                                <div className="title"title>Lap_1_Project</div>
+                                <div className="public">public</div>
+                                <div className="desc">learning JS</div>
+                                <div className="lang">Javascript</div><img src="" alt="" />
+                    </div>
+             
+                 
                   
                       
                     </div>
