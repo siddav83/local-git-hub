@@ -51,9 +51,6 @@ const User = ({userData, repoData}) => {
                     </div> */}
              
                     {repoData.length ? repoData.slice(0,6).map((ele) => {
-            
-                        console.log(ele.name)
-                        //    const { fullname, fork,fork_counts,language } = repoData;
                          return <div className="repo-card">
                                 <div className="title">{ele.fullname}</div>
                                 <div className="public?">{ele.fork}</div>
